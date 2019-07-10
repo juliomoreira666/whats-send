@@ -1,0 +1,33 @@
+.titulo {
+  text-align: center;
+}
+
+.titulo h1 {
+  cursor: pointer;
+}
+
+.titulo h1:before {
+  content: "";
+  width: 50px;
+  margin-top: 1em;
+  height: 50px;
+  display: inline-block;
+  background-image: url("../assets/img/social-01-512.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.s2 {
+  color: red;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+select,
+input,
+textarea {
+  color: #000000;
+}
+h5 a {
+  color: #f2f2f2;
+}

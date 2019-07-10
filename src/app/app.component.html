@@ -1,21 +1,61 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+  <!-- columns should be the immediate child of a .row -->
+  <div class="row">
+    <div class="u-full-width titulo">
+      <h1
+        title="Envie mensagens para qualquer número sem adicioná-lo!"
+        alt="nvie mensagens para qualquer número sem adicioná-lo!"
+      >
+        Whats Send
+      </h1>
+    </div>
+    <div class="seven columns">
+      <label for="exampleEmailInput"
+        >Número que deseja enviar a mensagem (Apenas números Ex:.
+        999999999)</label
+      >
+      <input
+        (input)="this.numero = $event.target.value"
+        title="Apenas números"
+        maxlength="9"
+        class="u-full-width"
+        type="tel"
+        placeholder="9-9999-9999"
+      />
+    </div>
+    <div class="seven columns">
+      <label for="exampleRecipientInput">DDD</label>
+      <input
+        (input)="this.ddd = $event.target.value"
+        title="Apenas números"
+        maxlength="3"
+        class="u-full-width"
+        type="text"
+        placeholder="000"
+      />
+      <label for="exampleMessage">Mensagem</label>
+      <textarea
+        (input)="this.mensagem = $event.target.value"
+        class="u-full-width"
+        placeholder="Eae tranquilo manolo?!"
+        id="exampleMessage"
+      ></textarea>
+      <input
+        (click)="sendMensagem()"
+        class="button-primary"
+        type="submit"
+        value="Enviar"
+      />
+    </div>
+    <div class="seven columns">
+      <h5>
+        Feito com <span class="s2">♥</span> por
+        <a target="_blank" href="https://www.facebook.com/oilujmoreira"
+          >Júlio Moreira</a
+        >
+      </h5>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
 <router-outlet></router-outlet>
