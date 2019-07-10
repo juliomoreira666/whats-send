@@ -10,6 +10,17 @@
       </h1>
     </div>
     <div class="seven columns">
+      <label for="exampleRecipientInput">DDD</label>
+      <input
+        (input)="this.ddd = $event.target.value"
+        title="Apenas números"
+        maxlength="3"
+        class="u-full-width"
+        type="text"
+        placeholder="000"
+      />
+    </div>
+    <div class="seven columns">
       <label for="exampleEmailInput"
         >Número que deseja enviar a mensagem (Apenas números Ex:.
         999999999)</label
@@ -22,17 +33,7 @@
         type="tel"
         placeholder="9-9999-9999"
       />
-    </div>
-    <div class="seven columns">
-      <label for="exampleRecipientInput">DDD</label>
-      <input
-        (input)="this.ddd = $event.target.value"
-        title="Apenas números"
-        maxlength="3"
-        class="u-full-width"
-        type="text"
-        placeholder="000"
-      />
+
       <label for="exampleMessage">Mensagem</label>
       <textarea
         (input)="this.mensagem = $event.target.value"
