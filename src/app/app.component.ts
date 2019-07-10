@@ -16,6 +16,6 @@ export class AppComponent {
     this.linkApiWhats = `https://api.whatsapp.com/send?phone=55${this.ddd}${
       this.numero
     }&text=${this.mensagem}`;
-    window.location.href = this.linkApiWhats;
+    window.open(this.linkApiWhats);
   }
 }
